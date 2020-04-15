@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+    <title>Begin Reflecting</title>
+</head>
+<body style="padding: 20px 5% 10%;">
+<div class="container-fluid">
+    <script type="text/javascript">
+        document.write("<h2>Reflection Start:</h2>")
+        document.write("<p>Think of an event that happened recently.</p>")
+    </script>
+
+
+    <div class="form-group">
+        <label for="txtEvent">What event are you thinking of? It can be anything from a class assignment to a life
+            event.</label>
+        <input class="form-control" id="txtEvent" name="txtEvent" type="text" value="">
+    </div>
+    <button class="btn btn-primary" onclick="clickButton()" type="button">Continue</button>
+    <script type="text/javascript">
+        function clickButton() {
+            //alert("started_1"); //just for information
+            var txtEvent = document.getElementById('txtEvent').value.trim();
+            //alert(txtEvent); //just for information
+            localStorage.setItem("eventName", txtEvent);
+            window.location.href = "Reflection2.html"
+        }
+    </script>
+
+    <!--onclick='window.location.href = "https://stackoverflow.com"'-->
+    <!--onclick='localStorage.setItem("eventName",txtEvent)'-->
+    <script>
+        document.write("<center>You may exit at any time.</center>")
+    </script>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="js/CustomScripts.js"></script>
+</body>
+</html>
+

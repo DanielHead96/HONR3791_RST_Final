@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+
+    <title>Begin Reflecting</title>
+</head>
+<body style="padding: 20px 5% 10%;">
+<div class="container-fluid">
+    <script type="text/javascript">
+        document.write("<h2>Description:</h2>")
+        var eventName = localStorage.getItem("eventName");
+        var eventFeelings = localStorage.getItem("eventFeelings");
+        var eventEval = localStorage.getItem("eventEval");
+        var text = "Having thought about your feelings during " + eventName + " and evaluating it, what sense can you" +
+            " make of the event? <br />";
+        document.write(text);
+        document.write("You can see your review and evaluation below before completing this step.<br /><br />")
+
+
+    </script>
+    <div class="btn-group">
+        <button class="btn btn-info" data-target="#feelings" data-toggle="collapse" type="button">Event Feelings
+        </button>
+        <button class="btn btn-info" data-target="#eval" data-toggle="collapse" type="button">Event Evaluation</button>
+    </div>
+    <div class="collapse" id="feelings">
+        <script>
+            document.write("Feelings: <br />" + eventFeelings)
+        </script>
+    </div>
+    <div class="collapse" id="eval">
+        <script>
+            document.write("Evaluation: <br />" + eventEval)
+        </script>
+    </div>
+    <script>
+        text = "<br /><br />What sense can you make of " + eventName + "?";
+        document.write(text);
+    </script>
+    <div class="form-group">
+        <textarea class="form-control" id="eventReDescription" rows="5"></textarea>
+    </div>
+
+
+    <button class="btn btn-primary" onclick="clickButton()" type="button">Continue</button>
+
+    <script type="text/javascript">
+        function clickButton() {
+            //alert("started re-d"); //just for information
+            var txtReDescription = document.getElementById('eventReDescription').value;
+            //alert(txtReDescription); //just for information
+            localStorage.setItem("eventReDescription", txtReDescription);
+            window.location.href = "Reflection6.html"
+        }
+    </script>
+
+    <!--onclick='window.location.href = "https://stackoverflow.com"'-->
+    <!--onclick='localStorage.setItem("eventName",txtEvent)'-->
+    <div style="padding: 20px 50px 50px;text-align-all: center">
+        <p>Progress:</p>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar" role="progressbar"
+                 style="width: 48%"></div>
+        </div>
+    </div>
+
+    <script>
+        document.write("<center>You may exit at any time.</center>")
+    </script>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="js/CustomScripts.js"></script>
+</body>
+</html>
